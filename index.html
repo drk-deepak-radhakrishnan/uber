@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Resume: Deepak Radhakrishnan - Senior Director</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f2f5 0%, #e6e9ed 100%);
+            font-family: 'Lato', sans-serif;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+            margin: 0;
+            padding: 0;
+        }
+        .resume-container {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            background: white;
+            box-shadow: none;
+            padding: 2.5rem;
+            border-radius: 0;
+        }
+        .h1-style {
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
+            color: #333;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
+            font-size: 3rem;
+            letter-spacing: 0.05em;
+        }
+        .h2-style {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            color: #0053e2;
+            font-size: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .h3-style {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #1a2333;
+        }
+        .h4-style {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .company-name {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: #475569;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        b {
+            font-weight: 600;
+        }
+        p, li {
+            font-weight: 300;
+            font-size: 1.05rem; /* Increased font size slightly */
+        }
+        .project-title {
+            font-weight: 600;
+            margin-top: 0.75rem;
+            margin-bottom: 0.25rem;
+            color: #64748B;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        ul.custom-bullets {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+        ul.custom-bullets li {
+            position: relative;
+            padding-left: 1.5em;
+        }
+        ul.custom-bullets li .fa-check-circle {
+            position: absolute;
+            left: 0;
+            top: 0.45em;
+            color: #0053e2;
+            font-size: 0.8em;
+        }
+        ul.custom-bullets li::before {
+            content: none;
+        }
+        ul.competency-bullets {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem 1.5rem;
+        }
+        ul.competency-bullets li {
+            position: relative;
+            padding-left: 1.5em;
+        }
+        ul.competency-bullets li .fa-check-circle {
+            position: absolute;
+            left: 0;
+            top: 0.45em;
+            color: #0053e2;
+            font-size: 0.8em;
+        }
+        ul.competency-bullets li::before {
+            content: none;
+        }
+        .competency-panel {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
+        }
+        .panel-header {
+            background-color: #e0e5eb;
+            padding: 1rem 1.5rem;
+        }
+        .panel-body {
+            background-color: #f9fafb;
+            padding: 1.5rem;
+        }
+
+        /* Styles for the Highlights Section */
+        .resume-match-section {
+            background-color: #e6f0ff; /* Light blue background */
+            border: 1px solid #b3d1ff; /* Blue border */
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            height: 100%;
+        }
+        .resume-match-section h2 {
+            color: #0053e2;
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .resume-match-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .resume-match-section li {
+            position: relative;
+            padding-left: 2em;
+            margin-bottom: 0.75rem;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        .resume-match-section li .fa-bolt {
+            position: absolute;
+            left: 0;
+            top: 0.35em;
+            color: #0053E2; /* Updated bolt color */
+        }
+
+        @media print {
+            * {
+                text-shadow: none !important;
+                box-shadow: none !important;
+            }
+            body {
+                background: white !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            .resume-container {
+                width: 100% !important;
+                min-height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border-radius: 0 !important;
+            }
+            .competency-panel {
+                border: 1px solid #e0e0e0 !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .h1-style {
+                font-size: 2.25rem; /* Reduced font size for mobile */
+            }
+            .resume-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header class="text-center mb-10">
+            <div class="flex justify-center items-center gap-4">
+                <h1 class="h1-style">DEEPAK RADHAKRISHNAN</h1>
+            </div>
+            <div class="flex justify-center items-center flex-wrap gap-x-4 gap-y-2 mt-4 text-sm text-gray-600 font-light">
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt text-[#0053e2]"></i>
+                    <span>Bay Area, CA</span>
+                </div>
+                <span class="text-gray-400">&bull;</span>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone-alt text-[#0053e2]"></i>
+                    <span>(415) 416-5133</span>
+                </div>
+                <span class="text-gray-400">&bull;</span>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope text-[#0053e2]"></i>
+                    <span>Deepakssn@Gmail.com</span>
+                </div>
+                <span class="text-gray-400">&bull;</span>
+                <a href="https://linkedin.com/in/deepakssn" target="_blank" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin text-xl text-[#0053e2]"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Wrapper for Highlights and Alignment sections -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- REVISED: Highlights Section -->
+            <section class="resume-match-section">
+                <h2><i class="fas fa-bullseye-pointer"></i>Key Highlights</h2>
+                <ul>
+                    <li><i class="fas fa-bolt"></i><b>Large-Scale Platform Leadership:</b> Directed the <b>$14B+</b> Walmart e-commerce platform, managing Cart, Checkout, Promotions, Amends, Subscriptions, and the Customer Fraud Engine across 8+ countries.</li>
+                    <li><i class="fas fa-bolt"></i><b>GenAI & Customer Obsession Alignment:</b> Experience in the customer care domain, optimizing issue resolution and building agentic frameworks for AI-driven workflows.</li>
+                    <li><i class="fas fa-bolt"></i><b>Platform Reinvention & Cost Optimization:</b> Led a multi-year platform rebuild from first principles, resulting in a landmark <b>50% reduction</b> in infrastructure costs.</li>
+                    <li><i class="fas fa-bolt"></i><b>Global Leadership:</b> Successfully led a global team of <b>150+</b> engineers and partnered deeply with product, UX, and ops leaders across diverse markets.</li>
+                    <li><i class="fas fa-bolt"></i><b>Technical Vision & Execution:</b> Spearheaded the architecture of a high-performance, Rust-based Federated GraphQL router, demonstrating the ability to drive cutting-edge technical decisions.</li>
+                    <li><i class="fas fa-bolt"></i><b>Cross-Functional Partnership:</b> Proven success in partnering with product, UX, and operations leaders to deliver complex, multi-market platform migrations and feature rollouts.</li>
+                    <li><i class="fas fa-bolt"></i><b>End-to-End Product Lifecycle Ownership:</b> Experience owning the full product lifecycle, from ideation and roadmap development to delivery and support for revenue-generating platforms.</li>
+                </ul>
+            </section>
+
+            <!-- REVISED: Alignment Section -->
+            <section>
+                <h2 class="h2-style" style="border-bottom: none; margin-bottom: 1.25rem;"><i class="fas fa-link text-[#0053e2]"></i>Strategic Alignment for Sr. Director, Customer Obsession & Gen AI</h2>
+                <div class="space-y-4">
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h4 class="font-semibold text-gray-800">Platform Reinvention at Scale</h4>
+                        <p class="text-gray-700 leading-relaxed mt-1">Demonstrated experience in platform reinvention by leading Walmart's monolith-to-microservices migration for its $14B e-commerce platform, supporting over 100M requests/sec. This first-principles approach is directly aligned with Uber's goal of evolving its customer obsession platform.</p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h4 class="font-semibold text-gray-800">Customer-Obsessed AI Application</h4>
+                        <p class="text-gray-700 leading-relaxed mt-1">Proven ability to apply AI to enhance the customer journey, from leading the development of agentic frameworks to implementing personalization, dynamic relevancy tuning, and fraud prevention. This experience directly maps to the core responsibilities of the Customer Obsession & Gen AI role.</p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h4 class="font-semibold text-gray-800">Global Leadership & Cross-Functional Influence</h4>
+                        <p class="text-gray-700 leading-relaxed mt-1">Led a global team of 150+ engineers and fostered deep partnerships with cross-functional teams including Fraud, Payments, OMS, and Operations to deliver seamless end-to-end commerce experiences across international markets.</p>
+                    </div>
+                     <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h4 class="font-semibold text-gray-800">Operational Excellence & Cost Efficiency</h4>
+                        <p class="text-gray-700 leading-relaxed mt-1">Successfully managed platforms for 8+ international markets, navigating unique regulatory and localization needs while achieving a 50% reduction in infrastructure costs through strategic technical optimizations.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="mb-8">
+            <h2 class="h2-style"><i class="fas fa-bullseye text-[#0053e2]"></i>Core Competencies</h2>
+            <div class="space-y-6 text-gray-700">
+                <div class="competency-panel">
+                    <div class="panel-header"><h4 class="h4-style">Strategic & Executive Leadership</h4></div>
+                    <div class="panel-body">
+                        <ul class="competency-bullets">
+                            <li><i class="fas fa-check-circle"></i>Global Team Leadership (<b>150+</b>)</li>
+                            <li><i class="fas fa-check-circle"></i>Product Vision & Strategy</li>
+                            <li><i class="fas fa-check-circle"></i>Financial & Business Acumen</li>
+                            <li><i class="fas fa-check-circle"></i>Engineering & OpEx Culture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-panel">
+                    <div class="panel-header"><h4 class="h4-style">Technical & Architectural Vision</h4></div>
+                    <div class="panel-body">
+                        <ul class="competency-bullets">
+                            <li><i class="fas fa-check-circle"></i>AI/ML & Gen AI Strategy</li>
+                            <li><i class="fas fa-check-circle"></i>Platform Modernization</li>
+                            <li><i class="fas fa-check-circle"></i>Microservices & GraphQL</li>
+                            <li><i class="fas fa-check-circle"></i>Distributed Systems</li>
+                            <li><i class="fas fa-check-circle"></i>Cloud Architecture (Azure/GCP)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-panel">
+                    <div class="panel-header"><h4 class="h4-style">Business & Customer Impact</h4></div>
+                    <div class="panel-body">
+                        <ul class="competency-bullets">
+                            <li><i class="fas fa-check-circle"></i>Customer-Centric Innovation</li>
+                            <li><i class="fas fa-check-circle"></i>Customer Experience Platforms</li>
+                            <li><i class="fas fa-check-circle"></i>Agile Methodologies (Scrum & Kanban)</li>
+                            <li><i class="fas fa-check-circle"></i>Stakeholder Partnership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-8">
+            <h2 class="h2-style"><i class="fas fa-chart-line text-[#0053e2]"></i>Key Impact & Metrics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center text-gray-700">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                    <i class="fas fa-dollar-sign text-4xl text-[#0053e2] mb-3"></i>
+                    <p class="text-4xl font-extrabold text-[#1a2333] leading-none">$14B+</p>
+                    <p class="text-sm font-light text-gray-600 mt-1">Platform Revenue Enabled</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                    <i class="fas fa-piggy-bank text-4xl text-[#0053e2] mb-3"></i>
+                    <p class="text-4xl font-extrabold text-[#1a2333] leading-none">50%</p>
+                    <p class="text-sm font-light text-gray-600 mt-1">Infrastructure Cost Reduction</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                    <i class="fas fa-users text-4xl text-[#0053e2] mb-3"></i>
+                    <p class="text-4xl font-extrabold text-[#1a2333] leading-none">150+</p>
+                    <p class="text-sm font-light text-gray-600 mt-1">Global Engineers Led</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                    <i class="fas fa-exchange-alt text-4xl text-[#0053e2] mb-3"></i>
+                    <p class="text-4xl font-extrabold text-[#1a2333] leading-none">100M+</p>
+                    <p class="text-sm font-light text-gray-600 mt-1">Requests Supported</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+        
+        <section class="mb-8">
+            <h2 class="h2-style"><i class="fas fa-briefcase text-[#0053e2]"></i>Professional Experience</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="h3-style">Walmart (NASDAQ: WMT)</h3>
+                    <p class="company-name mb-4 font-light">Bay Area, CA | Jun 2019 – Present</p>
+
+                    <div class="ml-4 pl-4 border-l-2 border-gray-200">
+                        <h4 class="h4-style mb-1">Senior Director</h4>
+                        <div class="project-title">Walmart Mexico & Canada E-commerce Platform Migration</div>
+                        <ul class="custom-bullets text-gray-700 leading-relaxed">
+                            <li><i class="fas fa-check-circle"></i>Enabled <b>$14B</b> revenue by leading the large-scale, high-traffic migration of core e-commerce platforms (Cart, Checkout, Amends, Promotions), managing the lifecycle of product and content-related data for high-volume transactions to enhance the customer experience.</li>
+                            <li><i class="fas fa-check-circle"></i>Architected and delivered a high-performance, Rust-based Federated GraphQL router, implementing vertical scaling and eager autoscaling to achieve a <b>50% reduction in infrastructure costs</b> while improving system reliability.</li>
+                            <li><i class="fas fa-check-circle"></i>Led a global team of <b>150</b> engineers within the Purchase engineering domain and Front-End Platform teams, fostering a culture of engineering and operational excellence.</li>
+                        </ul>
+
+                        <h4 class="h4-style mb-1 mt-6">Director</h4>
+                        <div class="project-title">WCP FrontEnd & Orchestration Platform (Walmart International)</div>
+                        <ul class="custom-bullets text-gray-700 leading-relaxed">
+                            <li><i class="fas fa-check-circle"></i>Supported <b>$1.2B</b> revenue impact by delivering a scalable front-end orchestration platform, unifying five distinct e-commerce banners onto a single platform to create a seamless customer journey.</li>
+                            <li><i class="fas fa-check-circle"></i>Rearchitected the front-end to a modern React + Federated GraphQL stack, designing the gateway and subgraphs crucial for dynamic, personalized content delivery.</li>
+                        </ul>
+
+                        <h4 class="h4-style mb-1 mt-6">Senior Manager</h4>
+                        <div class="project-title">Walmart UK (ASDA) CMS Migration & Experience Enhancements</div>
+                           <ul class="custom-bullets text-gray-700 leading-relaxed">
+                               <li><i class="fas fa-check-circle"></i>Supported <b>$240M</b> revenue by leading the migration from Oracle ATG to Walmart’s in-house headless CMS (Tempo), enhancing content agility for a better customer experience.</li>
+                               <li><i class="fas fa-check-circle"></i>Delivered personalization, search, and Single Sign-on features, contributing to a <b>$780M</b> revenue impact by improving the customer's ability to discover and interact with products.</li>
+                           </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="h3-style">SKIDATA AG (SWX: KUD)</h3>
+                    <p class="company-name mb-4 font-light">Bay Area, CA | Feb 2016 – Jun 2019</p>
+                    <div class="ml-4 pl-4 border-l-2 border-gray-200">
+                        <h4 class="h4-style mb-1">Head of R&D</h4>
+                        <ul class="custom-bullets text-gray-700 leading-relaxed">
+                            <li><i class="fas fa-check-circle"></i>Generated <b>$3M</b> revenue through the launch of a rewards management and e-wallet platform, owning the roadmap, architecture, and end-to-end delivery for a complex, customer-facing distributed system.</li>
+                            <li><i class="fas fa-check-circle"></i>Managed a <b>50-person</b> engineering organization, delivering a BLE/NFC-based e-commerce ticketing and parking platform that generated <b>$1M</b> in revenue.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="h3-style">Symantec (NASDAQ: SYMC)</h3>
+                    <p class="company-name mb-4 font-light">Bay Area, CA | Sep 2013 – Feb 2016</p>
+                       <div class="ml-4 pl-4 border-l-2 border-gray-200">
+                            <h4 class="h4-style mb-1">Manager, Software Development</h4>
+                            <ul class="custom-bullets text-gray-700 leading-relaxed">
+                                <li><i class="fas fa-check-circle"></i>Delivered <b>four</b> major production releases of enterprise-grade secure email apps (iOS and Android), ensuring high reliability and performance for critical customer communications.</li>
+                                <li><i class="fas fa-check-circle"></i>Delivered <b>eight</b> product releases of the Symantec Mobility Suite, covering MDM services, Admin Hub UI, backend services, and mobile apps to provide a comprehensive enterprise mobility solution.</li>
+                            </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="h3-style">Infosys Technologies (NASDAQ: INFY)</h3>
+                    <p class="company-name mb-4 font-light">India & USA | Jul 2003 – Jul 2013</p>
+                       <div class="ml-4 pl-4 border-l-2 border-gray-200 space-y-4">
+                            <div>
+                                <h4 class="h4-style mb-1">Principal & Staff Engineer</h4>
+                                <p class="text-gray-700">Built a high-scale chat widget for AT&T Games portal, supporting <b>100K+</b> concurrent gamers with real-time features, demonstrating experience in high-performance, real-time distributed systems that are foundational to modern customer support platforms.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="h2-style"><i class="fas fa-trophy text-[#0053e2]"></i>Select Achievements & Awards</h2>
+            <ul class="custom-bullets text-gray-700 space-y-2">
+                <li><i class="fas fa-check-circle"></i><b>Impact Award Winner:</b> Top leadership award at Walmart.</li>
+                <li><i class="fas fa-check-circle"></i><b>Trailblazer Team Award:</b> For major platform migration in Walmart Chile.</li>
+                <li><i class="fas fa-check-circle"></i><b>Patents:</b> Submitted <b>TWO</b> mobile patents and <b>ONE</b> patent on car access.</li>
+                <li><i class="fas fa-check-circle"></i><b>Symantec Awards:</b> Level <b>3</b> Award for best management; Level <b>3</b> Award from VP of Product Management for Innovation.</li>
+                <li><i class="fas fa-check-circle"></i><b>AT&T Certificate of Achievement</b> for Kaazing Gamer Scratchpad.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="h2-style"><i class="fas fa-graduation-cap text-[#0053e2]"></i>Education</h2>
+            <div>
+                   <h4 class="h4-style mb-1">B.E. Computer Science & Engineering</h4>
+                   <p class="text-gray-700 font-light">SSN College of Engineering, University of Madras</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
