@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Radhakrishnan - Senior Director</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb; /* Blue-600 */
+            --secondary-color: #111827; /* Gray-900 */
+            --light-bg: #f3f4f6; /* Gray-100 */
+            --text-dark: #1f2937; /* Gray-800 */
+            --text-light: #f9fafb; /* Gray-50 */
+            --text-medium: #6b7280; /* Gray-500 */
+            --border-color: #d1d5db; /* Gray-300 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e7eb;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .resume-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==== LEFT COLUMN ==== */
+        .left-column {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 2.5rem 2rem;
+        }
+        
+        .header {
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+        .header h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .header h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #4b5563;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+        }
+        .contact-item i {
+            color: var(--primary-color);
+            width: 16px;
+            text-align: center;
+        }
+        .contact-item a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+        .contact-item a:hover { color: white; }
+        
+        .metric-list .metric-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 0;
+        }
+        .metric-list .metric-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 30px;
+        }
+        .metric-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+        }
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        
+        .skill-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .skill-list li::before {
+            content: '\f058'; /* Font Awesome solid check circle */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        /* ==== RIGHT COLUMN ==== */
+        .right-column {
+            padding: 2.5rem;
+        }
+        
+        .main-section-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .main-section-title i {
+            color: var(--primary-color);
+        }
+        
+        .profile-summary {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 2.5rem;
+        }
+
+        .experience-item {
+            position: relative;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid var(--border-color);
+        }
+        .experience-item:last-child {
+            padding-bottom: 0;
+            border-left-color: transparent;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -8px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            background-color: white;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .job-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .company-info {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            margin-bottom: 0.75rem;
+        }
+        .company-name {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .experience-item ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-medium);
+        }
+        .experience-item li {
+            margin-bottom: 0.25rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .resume-container { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .resume-container { margin: 0; }
+            .left-column, .right-column { padding: 1.5rem; }
+        }
+        @media print {
+            body { background-color: white; font-size: 14px; }
+            .resume-container { box-shadow: none; margin: 0; grid-template-columns: 1fr 2.2fr; }
+            .left-column { background-color: var(--secondary-color) !important; }
+            * {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- ==== LEFT COLUMN ==== -->
+        <aside class="left-column">
+            <header class="header">
+                <h1>Deepak Radhakrishnan</h1>
+                <h2>Senior Director, Platform Engineering & GenAI Strategy</h2>
+            </header>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Contact</h3>
+                <div class="contact-item"><i class="fas fa-map-marker-alt fa-fw"></i><span>Bay Area, CA</span></div>
+                <div class="contact-item"><i class="fas fa-phone fa-fw"></i><a href="tel:415-416-5133">(415) 416-5133</a></div>
+                <div class="contact-item"><i class="fas fa-envelope fa-fw"></i><a href="mailto:Deepakssn@Gmail.com">Deepakssn@Gmail.com</a></div>
+                <div class="contact-item"><i class="fab fa-linkedin fa-fw"></i><a href="https://linkedin.com/in/deepakssn" target="_blank">LinkedIn</a></div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Key Impact</h3>
+                <div class="metric-list">
+                    <div class="metric-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div>
+                            <p class="metric-value">$14B+</p>
+                            <p class="metric-label">Platform Revenue</p>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <i class="fas fa-piggy-bank"></i>
+                        <div>
+                            <p class="metric-value">50%</p>
+                            <p class="metric-label">Infra. Cost Reduction</p>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <p class="metric-value">150+</p>
+                            <p class="metric-label">Global Engineers Led</p>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <i class="fas fa-rocket"></i>
+                        <div>
+                            <p class="metric-value">20%</p>
+                            <p class="metric-label">Productivity Gain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Core Skills</h3>
+                <ul class="skill-list">
+                    <li>Global Team Leadership</li>
+                    <li>Platform Modernization</li>
+                    <li>GenAI & ML Strategy</li>
+                    <li>Cloud Architecture</li>
+                    <li>Cost Optimization</li>
+                    <li>Microservices</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Education</h3>
+                <p class="font-semibold text-white text-sm">B.E. Computer Science & Eng.</p>
+                <p class="text-sm">SSN College of Engineering</p>
+            </div>
+        </aside>
+
+        <!-- ==== RIGHT COLUMN ==== -->
+        <main class="right-column">
+            <section>
+                <h3 class="main-section-title"><i class="fa-solid fa-user"></i>Professional Summary</h3>
+                <p class="profile-summary">
+                    Dynamic and results-oriented Senior Director with over 22 years of experience leading large-scale platform engineering, driving digital transformation, and executing GenAI strategy. Proven track record of directing global teams to reinvent multi-billion dollar e-commerce platforms, achieving significant cost reductions, and fostering a culture of innovation and operational excellence.
+                </p>
+            </section>
+            <section>
+                <h3 class="main-section-title"><i class="fa-solid fa-briefcase"></i>Work Experience</h3>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <p class="job-title">Senior Director</p>
+                        <div class="company-info">
+                            <span class="company-name">Walmart</span>
+                            <span>| Bay Area, CA | 2019 – Present</span>
+                        </div>
+                        <ul>
+                            <li>- Directed the <b>$14B+</b> e-commerce platform, leading a global team of <b>150+</b> engineers.</li>
+                            <li>- Architected a high-performance, Rust-based Federated GraphQL router and directed SIG governance, resulting in a <b>50% reduction in infrastructure costs</b>.</li>
+                            <li>- Unified <b>5</b> e-commerce banners onto a single, scalable front-end orchestration platform.</li>
+                            <li>- Improved developer productivity by <b>20%</b> by establishing a DevOps Dojo to upskill engineers.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <p class="job-title">Head of R&D</p>
+                        <div class="company-info">
+                            <span class="company-name">SKIDATA AG</span>
+                             <span>| Bangalore, India | 2016 – 2019</span>
+                        </div>
+                        <ul>
+                            <li>- Generated <b>$4M</b> in new revenue by launching rewards and e-commerce parking platforms.</li>
+                            <li>- Owned the full product lifecycle, from roadmap to delivery, managing a <b>50-person</b> engineering team.</li>
+                             <li>- Architected a microservices backend and BLE/NFC-enabled mobile apps for the parking platform.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <p class="job-title">Manager, Software Development</p>
+                        <div class="company-info">
+                            <span class="company-name">Symantec</span>
+                            <span>| Pune, India | 2013 – 2016</span>
+                        </div>
+                        <ul>
+                            <li>- Delivered <b>12+</b> major releases for the Symantec Mobility Suite and Secure Email apps (iOS & Android).</li>
+                            <li>- Held accountability for feature delivery across Mobile Apps, UI, and backend services.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <p class="job-title">Principal / Staff Engineer</p>
+                        <div class="company-info">
+                            <span class="company-name">Infosys Technologies</span>
+                            <span>| Chennai, India | 2003 – 2013</span>
+                        </div>
+                        <ul>
+                            <li>- Built a high-scale chat widget for AT&T Games, supporting <b>100K+</b> concurrent users.</li>
+                            <li>- Owned approximately <b>50%</b> of feature development, including chat, media sharing, and multi-chat rooms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
